@@ -1,87 +1,198 @@
-Urban Routes Automation Testing
+# 🚕 Urban Routes Automation Testing
 
-This repository contains automated end-to-end (E2E) tests for the Urban Routes application. The tests are written to verify the full process of ordering a taxi, ensuring the system behaves as expected.
+> Automated end-to-end (E2E) tests for the Urban Routes application, ensuring a smooth and reliable taxi booking experience from start to finish.
 
-Test Scenarios
+![Tests](https://img.shields.io/badge/tests-e2e-blue?style=flat-square)
+![Framework](https://img.shields.io/badge/framework-WebdriverIO-orange?style=flat-square)
+![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
 
-The automated tests cover the following scenarios:
+---
 
-    Setting the Address
+## 📋 Overview
 
-        Verify that the user can correctly set the pickup and drop-off locations.
+This repository contains automated end-to-end tests for the **Urban Routes** application. The test suite verifies the full process of ordering a taxi, covering everything from setting the address to confirming the car search modal appears.
 
-    Selecting Supportive Plan
+---
 
-        Check that the user can choose a supportive plan from the available options.
+## ✅ Test Scenarios
 
-    Filling in the Phone Number
+|
+ 
+#
+ 
+|
+ Scenario 
+|
+ Description 
+|
 
-        Ensure the phone number field is functional and accepts valid input.
+|
+---
+|
+----------
+|
+-------------
+|
 
-    Adding a Credit Card
+|
+ 1 
+|
+ 📍 
+**
+Setting the Address
+**
+ 
+|
+ Verify that the user can correctly set the pickup and drop-off locations. 
+|
 
-        Tip: The "link" button does not become active until the card CVV field loses focus. This can be simulated by pressing TAB or clicking somewhere else on the screen.
+|
+ 2 
+|
+ 🧑‍🦯 
+**
+Selecting Supportive Plan
+**
+ 
+|
+ Check that the user can choose a supportive plan from the available options. 
+|
 
-        Ensure the credit card details can be added correctly using the modal with id="code" and class="card-input".
+|
+ 3 
+|
+ 📞 
+**
+Filling in the Phone Number
+**
+ 
+|
+ Ensure the phone number field is functional and accepts valid input. 
+|
 
-    Writing a Message for the Driver
+|
+ 4 
+|
+ 💳 
+**
+Adding a Credit Card
+**
+ 
+|
+ Ensure credit card details can be added correctly using the modal with 
+`id="code"`
+ and 
+`class="card-input"`
+. 
+|
 
-        Verify that the user can add a custom message for the driver in the appropriate field.
+|
+ 5 
+|
+ 💬 
+**
+Writing a Message for the Driver
+**
+ 
+|
+ Verify that the user can add a custom message for the driver. 
+|
 
-    Ordering a Blanket and Handkerchiefs
+|
+ 6 
+|
+ 🛏️ 
+**
+Ordering a Blanket and Handkerchiefs
+**
+ 
+|
+ Verify the user can order a blanket and handkerchiefs, using two selectors: one for the click and one for the state verification. 
+|
 
-        Tip: There are two selectors to be aware of here:
+|
+ 7 
+|
+ 🍦 
+**
+Ordering 2 Ice Creams
+**
+ 
+|
+ Check the user can successfully order two ice creams along with the ride. 
+|
 
-            One selector for the click action.
+|
+ 8 
+|
+ 🚗 
+**
+Car Search Modal Appears
+**
+ 
+|
+ Verify that the car search modal pops up after the order has been placed. 
+|
 
-            One to verify that the state has changed using an expect statement.
+|
+ 9 
+|
+ ⏳ 
+**
+Waiting for Driver Info
+**
+ 
+*
+(Optional)
+*
+ 
+|
+ Ensures that the driver's information is displayed correctly in the modal after the car search. 
+|
 
-    Ordering 2 Ice Creams
 
-        Check that the user can successfully order two ice creams along with the ride.
+> 💡 **Tip:** The "Link" button for adding a credit card does not become active until the CVV field loses focus. This can be simulated by pressing `TAB` or clicking somewhere else on the screen.
 
-    Car Search Modal Appears
+> 💡 **Tip:** For the blanket and handkerchiefs step, use one selector to perform the click and a separate selector with an `expect` statement to verify the state change.
 
-        Verify that the car search modal pops up after the order has been placed.
+---
 
-    Optional: Waiting for Driver Info to Appear
+## 🗂️ Project Structure
 
-        This step is optional but good practice. It ensures that the driver's information is displayed correctly in the modal after the car search.
+```text
+urban-routes-automation/
+├── test/
+│   └── specs/
+│       └── createAnOrder.e2e.js   # All E2E tests for the Urban Routes order process
+├── package.json
+└── README.md
 
-Structure
-
-    test/specs/createAnOrder.e2e.js: This file contains all the end-to-end tests for the Urban Routes order process.
-
-Installation & Setup
-
-    Clone the repository:
-
-    bash
+🚀 Installation & Setup
+1. Clone the repository
 
 git clone https://github.com/username/urban-routes-automation.git
 
-Navigate to the project directory:
-
-bash
+2. Navigate to the project directory
 
 cd urban-routes-automation
 
-Install the required dependencies:
+3. Install dependencies
 
-bash
+npm install
 
-    npm install
+▶️ Running the Tests
 
-Running the Tests
-
-To execute the tests, run the following command:
-
-bash
+To execute the test suite, run:
 
 npm test
 
-Notes
+📝 Notes
 
-    Ensure that the application server is running before executing the tests.
+    Ensure the Urban Routes application server is running before executing the tests.
+    Make sure all dependencies are up to date for the smoothest test execution.
+    Tests are located in test/specs/createAnOrder.e2e.js.
 
-    Make sure that all dependencies are up to date for the smooth running of tests.
+🤝 Contributing
+
+Contributions are welcome! If you find a bug or want to add a new test scenario, feel free to open an issue or submit a pull request.
+<p align="center">Made with ❤️ for reliable Urban Routes testing.</p> ```
